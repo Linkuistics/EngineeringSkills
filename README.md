@@ -140,12 +140,10 @@ the public Grove repository.
 
 `check:plugin` and `check:doubt` are the checks of the craft skills.
 
-`GROVE_COMMIT` names Grove commit `d65914d57015d88924edf5dc9d22df467ff82264`.
-That commit still ships Grove's own copies of the fifteen skills and the four
-rules. The pack passes alone, and the doubt check passes. The aggregate fails,
-because each moving kind and each moved rule is a duplicate. `task check`
-therefore exits non-zero at this commit. A later commit of this pack names the
-Grove commit that removes Grove's copies.
+`GROVE_COMMIT` names Grove commit `f45c5a53796f2a5bf634fec340cb0d7aef63e184`,
+which removed Grove's own copies of these skills. The pack passes alone, and
+the doubt check passes. The aggregate reads each engineering kind and each
+moved rule once.
 
 The doubt check reads Grove's text at `GROVE_COMMIT`. A change of Grove's
 wording therefore reaches this pack when the pack moves `GROVE_COMMIT` forward.
@@ -209,6 +207,10 @@ it. The move made these changes:
   other eight craft skills have no section there.
 
 The other craft skills have no change.
+
+Grove commit `f45c5a53796f2a5bf634fec340cb0d7aef63e184` removed Grove's copies
+of these files. `GROVE_COMMIT` names that commit, so the aggregate check reads
+each engineering kind once.
 
 `grove-impl` and `doubt-driven-development` adapt passages of
 [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills), which
